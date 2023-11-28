@@ -1,0 +1,16 @@
+
+#subject-list{
+    list-style: none;
+    padding: 10px 5px;
+    border: 2px solid black;
+    /* background-color: rgb(223, 185, 168); */
+    background-image: radial-gradient(rgb(242, 145, 145),rgb(230, 132, 80),rgb(232, 198, 198));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#subject-list li{
+    margin: 10px auto;
+}

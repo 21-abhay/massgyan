@@ -1,0 +1,51 @@
+
+
+form#addnotes{
+    border: 2px solid rgb(4, 4, 4);
+    /* background-color: rgb(231, 230, 230); */
+
+}
+
+.note-form-parts{
+    border-bottom: 3px solid rgb(112, 68, 68);
+    padding: 5px;
+    margin: 5px;
+}
+
+form textarea{
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+textarea.subject{
+    font-weight: bold;
+    font-size: 120%;
+}
+
+textarea#topic{
+    background-color: rgb(252, 187, 187);
+    font-size: large;
+    font-weight: bold;
+}
+
+textarea.subtopic{
+    background-color: rgb(213, 220, 220);
+    font-size: large;
+    font-weight: bold;
+}
+textarea.description{
+    background-color: rgb(185, 185, 205);
+}
+textarea.paragraph{
+    background-color: rgb(185, 185, 205);
+}
+table{
+    margin: 5px auto;
+}
+thead,tbody{
+}
+tr,th,td{
+    border: 2px solid black;
+    padding: 00px;
+    margin: 0;
+}

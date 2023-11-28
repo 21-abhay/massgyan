@@ -1,0 +1,12 @@
+ 
+#login-form{
+    /* border: 2px solid black; */
+}
+
+#login-form input{
+    border: 2px solid rgb(233, 140, 140);
+}
+
+#signin-form input{
+    border: 2px solid rgb(233, 140, 140);
+}
