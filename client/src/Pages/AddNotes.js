@@ -19,8 +19,10 @@ function AddNotes(props) {
   useEffect(() => {
     if(url.pathname === '/addnotes'){
       setNotes({"subject":'',"title":"","chapter":"","description":"","subtopic":[]});
+      document.title="ADD Notes"
     }
     else{
+      document.title = `Update-${subject}-${notes.title}`
       if(subject && topic){
         const update = true;
         fetchnotes(subject,topic,update);

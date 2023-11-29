@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 // import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Footer from './Components/Footer';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
@@ -18,6 +19,12 @@ function App() {
 
   return (
       <>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>MassGyan</title>
+          <meta name="description" content="This is Tutorial Website which help students to get notes and study matrial." />
+        </Helmet>
+
         <Router>
           <SearchBar />
           <NavBar />

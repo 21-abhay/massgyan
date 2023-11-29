@@ -5,6 +5,7 @@ import './CSS/Login_signin.css';
 export default function Login() {
   
   const navigate = useNavigate();
+  document.title = "Login";
 
   const [login,setLogin]=useState({"email":'',"password":''});
   const handleOnchange = (e)=>{

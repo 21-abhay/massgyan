@@ -8,6 +8,7 @@ export default function Home() {
   const { subjects, fetchSubjects } = useContext(noteContext);
   useEffect(() => {
     fetchSubjects();
+    // document.title = "MassGyan-Tutorial"
   },[])
 
 

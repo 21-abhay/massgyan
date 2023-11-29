@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './CSS/Login_signin.css';
 
 export default function Singin() {
+  document.title = "Sign-In";
   
   const navigate = useNavigate();
 

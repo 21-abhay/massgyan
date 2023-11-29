@@ -12,6 +12,7 @@ export default function TutorialPage(props) {
   const { Newnote, fetchnotes,fetchTopics } = useContext(noteContext);
   useEffect(() => {
     fetchnotes(subject,topic);
+    document.title = `${subject}-${Newnote.title}`;
     if(window.innerWidth > 575){
       setIsOpen(true)
     }
