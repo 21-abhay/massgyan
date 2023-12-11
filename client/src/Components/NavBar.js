@@ -59,7 +59,7 @@ export default function NavBar() {
             <li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/addnotes">Add Notes</Link></li>
+                {/* <li><Link className="dropdown-item" to="/addnotes">Add Notes</Link></li> */}
                 {/* <li><Link className="dropdown-item" to="/update">Update Notes</Link></li> */}
                 <li><Link className="dropdown-item" to="#">Technology</Link></li>
                 <li><Link className="dropdown-item" to="#">Exams</Link></li>
@@ -68,9 +68,10 @@ export default function NavBar() {
               </ul>
             </li>
           </ul>
-          {localStorage.getItem('token') ? <Link to="/logout"><button className="btn btn-outline-danger mx-2" type="button" onClick={logoutOnclick}>
+          {localStorage.getItem('token') ? <><Link to="/addnotes"><button className="btn btn-outline-danger mx-2" type="button">Add Notes</button></Link>
+          <Link to="/logout"><button className="btn btn-outline-danger mx-2" type="button" onClick={logoutOnclick}>
               Logout
-            </button></Link> : <><Link to="/login"><button className="btn btn-outline-danger mx-2" type="button">
+            </button></Link></> : <><Link to="/login"><button className="btn btn-outline-danger mx-2" type="button">
               Login
             </button></Link>
           <Link to="/Signin"><button className="btn btn-outline-danger mx-2" type="button">
