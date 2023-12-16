@@ -12,10 +12,12 @@ export default function Login() {
     setLogin({...login, [e.target.name]:e.target.value});
   }
 
+  const API_URL = "http://localhost:" + process.env.REACT_APP_PORT + "/api/user/login"
+
   const submitLogin = async(event)=>{
     event.preventDefault();
     console.log("Login data : ",login);
-    const response = await fetch("http://localhost:8000/api/user/login", {
+    const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,6 +34,7 @@ export default function Login() {
         }
         else{
             alert("Invalid credentials");
+            console.log(API_URL)
         }
   }
   

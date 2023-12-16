@@ -12,11 +12,13 @@ export default function Singin() {
     setSignin({...signin, [e.target.name]:e.target.value});
   };
 
+  const API_URL = "http://localhost:"+process.env.REACT_APP_PORT + "/api/user/signin"
+
   
   const submitSignin = async(event)=>{
     event.preventDefault();
     console.log("Sign-in data : ",signin);
-    const response = await fetch("http://localhost:8000/api/user/signin", {
+    const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
