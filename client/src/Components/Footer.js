@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaYoutube } from 'react-icons/fa';
 import { MdCopyright } from 'react-icons/md';
 import './CSS/Footer.css';
 
@@ -63,6 +63,9 @@ export default function Footer() {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="https://www.linkedin.com/in/abhayjeet-kumar-186427263/" target='_blank'><FaLinkedin size={32} /></Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="https://www.youtube.com/@BrainSensitivity21/" target='_blank'><FaYoutube size={32} color={'Red'}/></Link>
                     </li>
                 </ul>
             </div>
