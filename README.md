@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `Add .env file with following `
+
+API_KEY = for backend
+PORT = for backend
+JWT_SECRET = 
+mongoURI =
+REACT_APP_PORT = same for frontend
+REACT_APP_API_KEY =  same for frontend
+REACT_APP_API = domain name
+REACT_APP_FETCH_NOTES = route only
+REACT_APP_FETCH_TOPICS =  route only
+REACT_APP_ADD_NOTES = route only
+REACT_APP_UPDATE_NOTES = route only
+REACT_APP_DELETE_NOTES = route only
+
+
 ## Available Scripts
 
 In the project directory, you can run:
