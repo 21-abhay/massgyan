@@ -1,6 +1,7 @@
 
 
 // import React from "react";
+// import "dotenv"
 import {  useState } from "react";
 import noteContext from "./NoteContext";
 

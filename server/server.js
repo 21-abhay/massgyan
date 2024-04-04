@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-dotenv.config({path:'../client/.env'});
+dotenv.config({path:'../.env'});
 // dotenv.config({path:'../.env'});
 app.use(cors());
 connectToMongo();
