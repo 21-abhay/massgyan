@@ -1,0 +1,10 @@
+{
+    "vercel":2,
+    "name":"massgyan",
+    "builds":[
+        {"src":"server.js","use":"@vercel/node"}
+    ],
+    "routes":[
+        {"src":"/(.*)","dest":"/server.js.js"}
+    ]
+}
