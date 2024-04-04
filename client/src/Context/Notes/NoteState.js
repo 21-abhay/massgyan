@@ -1,7 +1,6 @@
 
 
 // import React from "react";
-// import "dotenv"
 import {  useState } from "react";
 import noteContext from "./NoteContext";
 
@@ -15,7 +14,8 @@ const NoteState = (props)=>{
       const [topics,setTopics] = useState([{_id:"",title:""}]);
       const [subjects,setSubjects] = useState([{_id:"",title:""}]);
 
-      const API_URL = process.env.REACT_APP_API+process.env.REACT_APP_PORT
+      // const API_URL = process.env.REACT_APP_API+process.env.REACT_APP_PORT
+      const API_URL = window.location.origin;
 
       const addnotes = async(update)=>{
         console.log("Notes Added : ",notes)
