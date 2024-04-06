@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-const connectToMongo = require('./server/db');
+const connectToMongo = require('./db');
 const cors = require('cors');
 const express = require('express');
 const app = express();
@@ -12,13 +12,13 @@ connectToMongo();
 app.use(express.json());
 
 
-app.use('/api/notes', require('./server/Routes/Notes'));
-app.use('/api/user', require('./server/Routes/User'));
+app.use('/api/notes', require('./Routes/Notes'));
+app.use('/api/user', require('./Routes/User'));
 
-app.use(express.static(path.resolve(__dirname, './client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./client/build/index.html'));
+    res.sendFile(path.resolve(__dirname,'../client/build/index.html'));
 })
 
 
