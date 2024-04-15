@@ -15,7 +15,8 @@ const NoteState = (props)=>{
       const [subjects,setSubjects] = useState([{_id:"",title:""}]);
 
       // const API_URL = process.env.REACT_APP_API+process.env.REACT_APP_PORT
-      const API_URL = window.location.origin;
+      // const API_URL = process.env.REACT_APP_API
+      // const API_URL = window.location.origin;
 
       const addnotes = async(update)=>{
         console.log("Notes Added : ",notes)
