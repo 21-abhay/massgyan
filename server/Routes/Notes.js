@@ -1,7 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
-const fetchuser = require('../middleware/fetchuser');
+// const fetchuser = require('../middleware/fetchuser');
 const authenticateApiKey =require('../Middleware/ApiKeyAuthentication');
 const FetchNote = require('../Controllers/Notes/FetchNote');
 const FetchTopic = require('../Controllers/Notes/FetchTopic');
