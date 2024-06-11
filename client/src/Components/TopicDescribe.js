@@ -31,7 +31,7 @@ export default function TopicDescribe(props) {
         <center><h1 className='title'>{Newnote.title ? Newnote.title : subject}</h1></center>
         <p>{Newnote.description ? Newnote.description : ""}</p>
         {Newnote.subtopic ? Newnote.subtopic.map((subtopic,subtopicIndex)=>{
-          return <div key={subtopicIndex}>
+          return <div key={subtopicIndex} className='container-fluide'>
                   <h2 className='subtopic-title'>{subtopic.title}</h2>
                   {subtopic.detail.map((element,i)=>{
                     return <div key={i}>
@@ -73,7 +73,6 @@ export default function TopicDescribe(props) {
                   <br />
                 </div>
         }) : ""}
-        TopicDescribe
     </div>
   )
 }

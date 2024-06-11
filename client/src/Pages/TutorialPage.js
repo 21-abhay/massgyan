@@ -47,7 +47,6 @@ export default function TutorialPage(props) {
   );
   return (
     <div>
-      TutorialPage
       <div>{Newnote.title ? Notes : <NotFound />}</div>
     </div>
   );
