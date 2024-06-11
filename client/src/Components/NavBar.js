@@ -74,9 +74,10 @@ export default function NavBar() {
             </button></Link></> : <><Link to="/login"><button className="btn btn-outline-danger mx-2" type="button">
               Login
             </button></Link>
-          <Link to="/Signin"><button className="btn btn-outline-danger mx-2" type="button">
+          {/* <Link to="/Signin"><button className="btn btn-outline-danger mx-2" type="button">
               Sign-in
-            </button></Link></>}
+            </button></Link> */}
+            </>}
         </div>
       </div>
     </nav>

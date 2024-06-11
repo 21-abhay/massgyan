@@ -16,10 +16,10 @@ const NoteState = (props)=>{
 
       // const API_URL = process.env.REACT_APP_API+process.env.REACT_APP_PORT
       // const API_URL = process.env.REACT_APP_API
-      // const API_URL = window.location.origin;
+      const API_URL = window.location.origin;
 
       const addnotes = async(update)=>{
-        console.log("Notes Added : ",notes)
+        // console.log("Notes Added : ",notes)
         try {
           const requestOptions = {
             method: 'POST',
@@ -32,16 +32,16 @@ const NoteState = (props)=>{
           var url = update ? API_URL+process.env.REACT_APP_UPDATE_NOTES : API_URL+process.env.REACT_APP_ADD_NOTES;
           
           const response = await fetch(url, requestOptions);
-          console.log("Response : ",response);
+          // console.log("Response : ",response);
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
           else{
-            console.log(`${notes.title} added in ${notes.chapter} successfully...`)
+            // console.log(`${notes.title} added in ${notes.chapter} successfully...`)
             setMsg(false);
           }
         } catch (error) {
-          console.error("Error  adding notes :", error);
+          // console.error("Error  adding notes :", error);
         }
       }
 
@@ -50,6 +50,7 @@ const NoteState = (props)=>{
       // const updatenotes = ()=>{}
 
       const fetchnotes = async(subject,topic,update)=>{
+        // console.log("API url local host :-  ",API_URL)
         try {
           const requestOptions = {
             method: 'POST',
@@ -65,7 +66,7 @@ const NoteState = (props)=>{
           const data = await response.json();
           data.subject = subject;
           data.id = data._id;
-          console.log("Fetch Notes : ",data);
+          // console.log("Fetch Notes : ",data);
          
           if(update){
             setNotes(data);
@@ -75,7 +76,7 @@ const NoteState = (props)=>{
           // setNewNote({...Newnote, ['subject']:subject});
           
         } catch (error) {
-          console.error("Error fetching notes :", error);
+          // console.error("Error fetching notes :", error);
         }
       }
 
@@ -98,10 +99,10 @@ const NoteState = (props)=>{
           }
       
           const data = await response.json();
-          console.log("Fetch Topics: ", data);
+          // console.log("Fetch Topics: ", data);
           setTopics(data);
         } catch (error) {
-          console.error("Error fetching topics:", error);
+          // console.error("Error fetching topics:", error);
         }
       }
 
@@ -123,10 +124,10 @@ const NoteState = (props)=>{
             throw new Error('subjects Not Found');
           }
           const data = await response.json();
-          console.log("Fetch subjects: ", data);
+          // console.log("Fetch subjects: ", data);
           setSubjects(data);
         } catch (error) {
-          console.error("Error fetching subjects:", error);
+          // console.error("Error fetching subjects:", error);
         }
       }
     return(

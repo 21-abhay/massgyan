@@ -12,11 +12,11 @@ export default function Login() {
     setLogin({...login, [e.target.name]:e.target.value});
   }
 
-  const API_URL = "http://localhost:" + process.env.REACT_APP_PORT + "/api/user/login"
+  const API_URL = window.location.origin + "/api/user/login"
 
   const submitLogin = async(event)=>{
     event.preventDefault();
-    console.log("Login data : ",login);
+    // console.log("Login data : ",login);
     const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
@@ -25,7 +25,7 @@ export default function Login() {
             body: JSON.stringify(login)
         });
         const json = await response.json()
-        console.log(json);
+        // console.log(json);
         if (response.ok){
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken); 
@@ -34,13 +34,14 @@ export default function Login() {
         }
         else{
             alert("Invalid credentials");
-            console.log(API_URL)
+            // console.log(API_URL)
         }
   }
   
   return (
     <div className='container d-flex justify-content-center my-5' >
       <form style={{width:'350px'}} id='login-form'>
+        <h2>Only admin can login...</h2>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input type="email" name="email" onChange={handleOnchange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />

@@ -12,12 +12,12 @@ export default function Singin() {
     setSignin({...signin, [e.target.name]:e.target.value});
   };
 
-  const API_URL = "http://localhost:"+process.env.REACT_APP_PORT + "/api/user/signin"
+  const API_URL = window.location.origin + "/api/user/signin"
 
   
   const submitSignin = async(event)=>{
     event.preventDefault();
-    console.log("Sign-in data : ",signin);
+    // console.log("Sign-in data : ",signin);
     const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
@@ -26,7 +26,7 @@ export default function Singin() {
             body: JSON.stringify(signin)
         });
     const json = await response.json()
-    console.log(json);
+    // console.log(json);
     if (response.ok){
       // Save the auth token and redirect
       localStorage.setItem('token', json.authtoken); 

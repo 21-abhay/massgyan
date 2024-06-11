@@ -32,7 +32,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/signin" element={<Signin />} />
+            {/* <Route exact path="/signin" element={<Signin />} /> */}
             <Route exact path="/addnotes" element={<AddNotes />} />
             <Route exact path="/update/:subject/:topic" element={<AddNotes />} />
             <Route exact path="/tutorial/:subject" element={<TutorialPage home={true}/>} />
